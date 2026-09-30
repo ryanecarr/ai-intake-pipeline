@@ -1,0 +1,17 @@
+{
+  "complaint_id": "CX-2026-0452",
+  "received_date": "2026-04-02",
+  "received_channel": "email",
+  "customer_name": "Grace Whitfield",
+  "customer_phone": "555-0187",
+  "customer_email": "grace.whitfield@example.com",
+  "policy_number": "AU-77304",
+  "claim_reference": null,
+  "complaint_text": "Hi, I just got my renewal notice and my auto premium went up about 22% even though I haven't had any claims or tickets. Nobody reached out to explain it and I couldn't find anything in the letter about why. I'm not trying to make trouble, I'd just like to understand what changed and whether there are any discounts I'm missing. Thanks.",
+  "attachments_included": ["renewal_notice.pdf"],
+  "customer_tenure_years": 5,
+  "prior_complaints": 0,
+  "assigned_adjuster": null,
+  "current_claim_status": null,
+  "denial_reason_on_file": null
+}

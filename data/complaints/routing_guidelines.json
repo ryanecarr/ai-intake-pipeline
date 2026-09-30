@@ -1,0 +1,54 @@
+{
+  "routing_guidelines": {
+    "version": "1.0",
+    "carrier_name": "Harborline Mutual",
+    "description": "Complaint-routing rules for Harborline Mutual, a fictional property & casualty carrier. Illustrative sample data only.",
+    "complaint_categories": [
+      "claim_denial",
+      "claim_delay",
+      "coverage_question",
+      "adjuster_conduct",
+      "billing_or_premium",
+      "cancellation_or_nonrenewal",
+      "service_experience"
+    ],
+    "sentiment_categories": ["hostile", "angry", "upset", "frustrated", "concerned", "calm"],
+    "urgency_levels": {
+      "critical": "Contact the customer within 2 business hours. A supervisor owns the response.",
+      "high": "Respond within 1 business day. Supervisor reviews the response before it is sent.",
+      "standard": "Respond within 3 business days. Handled by the assigned claims or service representative.",
+      "low": "Respond within 7 business days. Standard handling."
+    },
+    "escalation_triggers": {
+      "supervisor_escalation": {
+        "requested_supervisor": "Customer asks for a supervisor, manager, or other senior contact",
+        "legal_threat": "Customer threatens legal action or mentions involving an attorney",
+        "regulator_threat": "Customer threatens a complaint to a regulator or consumer agency (state insurance department, CFPB, BBB)",
+        "cancellation": "Customer intends to cancel, switch carriers, or has already cancelled",
+        "eo_exposure": "Facts suggest possible errors & omissions exposure (coverage misrepresented or never explained)",
+        "public_threat": "Customer threatens to go public (news media, social media, review sites)"
+      },
+      "legal_review": {
+        "attorney_involved": "Customer has retained or is consulting an attorney",
+        "litigation": "Complaint mentions a lawsuit, litigation, or suing",
+        "bodily_injury": "Complaint alleges bodily injury",
+        "discrimination": "Complaint alleges discriminatory treatment"
+      },
+      "regulatory_flag": {
+        "regulator_complaint": "Customer states they will file, or have filed, a complaint with the state insurance regulator",
+        "vulnerable_customer": "Complaint involves a potentially vulnerable customer (elderly, disability, recent bereavement)",
+        "high_value_denial": "Denied claim above ${denied_claim_amount}",
+        "repeat_complaint": "Repeat complaint from the same customer within {repeat_complaint_window_days} days"
+      }
+    },
+    "regulatory_thresholds": {
+      "denied_claim_amount": 15000,
+      "repeat_complaint_window_days": 60
+    },
+    "response_tone_guidelines": {
+      "hostile_or_angry": "Lead with a specific acknowledgement of what went wrong for them. Stay calm and non-defensive; no policy citations in the first paragraph. Name who will contact them and by when.",
+      "upset_or_frustrated": "Show you understand by restating their concern in your own words, then explain what happens next and give a clear path to resolution.",
+      "concerned_or_calm": "Be clear, courteous, and factual. Answer the question asked and list any next steps."
+    }
+  }
+}

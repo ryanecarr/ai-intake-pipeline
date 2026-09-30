@@ -1,0 +1,58 @@
+[
+  {
+    "policy_number": "HO-58210",
+    "holder_name": "Arturo Reyes",
+    "line_of_business": "homeowners",
+    "coverage_form": "HO-3",
+    "property_address": "418 Alder Court, Millbrook",
+    "effective_date": "2025-09-01",
+    "expiration_date": "2026-08-31",
+    "status": "active",
+    "deductible": 1000,
+    "dwelling_limit": 285000,
+    "prior_claims": 0,
+    "premium_current": true
+  },
+  {
+    "policy_number": "AU-77304",
+    "holder_name": "Grace Whitfield",
+    "line_of_business": "personal_auto",
+    "coverage_form": "full_coverage",
+    "garaging_address": "92 Sumner Road, Eastfield",
+    "effective_date": "2026-05-01",
+    "expiration_date": "2027-04-30",
+    "status": "active",
+    "deductible": 500,
+    "liability_limits": "100/300/100",
+    "prior_claims": 0,
+    "premium_current": true
+  },
+  {
+    "policy_number": "HO-60133",
+    "holder_name": "Monique Barrett",
+    "line_of_business": "homeowners",
+    "coverage_form": "HO-3",
+    "property_address": "7 Larkspur Lane, Millbrook",
+    "effective_date": "2025-12-15",
+    "expiration_date": "2026-12-14",
+    "status": "active",
+    "deductible": 2500,
+    "dwelling_limit": 410000,
+    "prior_claims": 1,
+    "premium_current": true
+  },
+  {
+    "policy_number": "AU-75519",
+    "holder_name": "Theo Castellanos",
+    "line_of_business": "personal_auto",
+    "coverage_form": "liability_only",
+    "garaging_address": "1650 Orchard Street, Eastfield",
+    "effective_date": "2025-07-01",
+    "expiration_date": "2026-06-30",
+    "status": "cancelled_nonpayment",
+    "deductible": null,
+    "liability_limits": "50/100/50",
+    "prior_claims": 2,
+    "premium_current": false
+  }
+]

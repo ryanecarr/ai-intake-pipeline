@@ -1,0 +1,19 @@
+{
+  "complaint_id": "CX-2026-0417",
+  "received_date": "2026-03-24",
+  "received_channel": "web_form",
+  "customer_name": "Daniel Reyes",
+  "customer_phone": "555-0142",
+  "customer_email": "d.reyes@example.com",
+  "policy_number": "HO-58210",
+  "claim_reference": "CLM-HO-3391",
+  "claim_amount": 18750,
+  "complaint_text": "I'm writing on behalf of my father, Arturo, who is 81 and doesn't use email. A pipe under his kitchen sink burst while he was in the hospital in January and the water sat for almost two weeks before anyone found it. The floors, cabinets, and part of the subfloor are ruined. Your company denied the claim saying it was 'gradual seepage' and 'neglect.' He was in the HOSPITAL. That is not neglect. This is the second time we've had to complain to you this year, and nobody has called us back either time. My dad is sleeping in his recliner because the bedroom still smells like mold. I want someone above the adjuster to look at this. If I don't hear something real this week I'm filing with the state insurance commissioner and posting the whole thing online, and if I have to get a lawyer involved I will.",
+  "attachments_included": ["denial_letter.pdf", "hospital_discharge_summary.pdf", "damage_photos.zip"],
+  "customer_tenure_years": 14,
+  "prior_complaints": 1,
+  "prior_complaint_dates": ["2026-02-09"],
+  "assigned_adjuster": "K. Lindqvist",
+  "current_claim_status": "denied",
+  "denial_reason_on_file": "Loss attributed to continuous or repeated seepage of water over a period of 14 days or more; excluded under Section I exclusions."
+}
