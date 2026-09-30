@@ -95,7 +95,7 @@ COMPLAINT TEXT:
 CLASSIFICATION:
 - Type: {classification.complaint_type}
 - Sentiment: {classification.sentiment}
-- Urgency: {classification.urgency}
+- Urgency: {classification.urgency} — {ctx.routing['urgency_levels'].get(classification.urgency, '')}
 
 ESCALATIONS THAT APPLY:
 {fired}
@@ -108,7 +108,7 @@ DATA-INTEGRITY CAVEATS (do not contradict these in the response):
 
 Requirements for the response:
 - Open by acknowledging the customer's specific concern; do not lead with policy language.
-- Commit to a concrete next step and timeframe consistent with the urgency level. If the customer asked for a specific contact or deadline, address that request directly.
+- Commit to a concrete next step with a timeframe no longer than the urgency level's response window above. If the customer asked for a specific contact or deadline, address that request directly.
 {coverage_rule}
 - Keep it professional, warm, and free of jargon.
 

@@ -44,7 +44,7 @@ _SIGNAL_GUIDE = {
     "media_or_social_threat": "Customer threatens to go to the media, post on social media, or post reviews.",
     "consulting_or_retained_attorney": "Customer says they are already consulting, or have retained, an attorney.",
     "references_litigation": "Customer references a lawsuit, litigation, or suing.",
-    "bodily_injury_allegation": "Customer alleges bodily injury.",
+    "bodily_injury_allegation": "Customer alleges that a person was physically injured or made ill. Discomfort, inconvenience, or unpleasant property conditions (e.g. an odor) alone do not count.",
     "discrimination_allegation": "Customer alleges discriminatory treatment.",
     "intent_to_file_regulator": "Customer states they will file, or have filed, a complaint with the state insurance regulator/commissioner.",
     "vulnerable_customer": "The customer or insured is described as elderly, disabled, hospitalized, or recently bereaved.",

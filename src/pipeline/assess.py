@@ -131,9 +131,10 @@ def _build_prompt(
     complaint = ctx.complaint
     fired = []
     for det in escalations:
-        label = det.status.replace("_", " ").upper()
-        triggers = "; ".join(f.trigger for f in det.fired) or "—"
-        fired.append(f"- {det.category}: {label} ({triggers})")
+        fired.append(f"- {det.category}: {det.status.replace('_', ' ').upper()}")
+        # Include the evidence so the model doesn't second-guess facts it can't see.
+        fired.extend(f"    - {t.trigger} — evidence: {t.evidence}" for t in det.fired)
+        fired.extend(f"    - (could not evaluate) {t.trigger} — {t.evidence}" for t in det.indeterminate)
     fired_text = "\n".join(fired)
 
     flags = "\n".join(f"- {f.title}: {f.detail}" for f in ctx.flags) or "- None."
@@ -144,10 +145,11 @@ COMPLAINT (type={classification.complaint_type}, sentiment={classification.senti
 \"\"\"{complaint['complaint_text']}\"\"\"
 
 CONTEXT:
-- Customer tenure: {complaint.get('customer_tenure_years')} years; prior complaints: {complaint.get('prior_complaints')}
-- Claim status: {complaint.get('current_claim_status')}; denial reason on file: {complaint.get('denial_reason_on_file')}
+- Received: {complaint.get('received_date')}
+- Customer tenure: {complaint.get('customer_tenure_years')} years; prior complaints: {complaint.get('prior_complaints')} (dates: {complaint.get('prior_complaint_dates') or 'none on file'})
+- Claim status: {complaint.get('current_claim_status')}; claim amount: {complaint.get('claim_amount')}; denial reason on file: {complaint.get('denial_reason_on_file')}
 
-ESCALATION DETERMINATIONS:
+ESCALATION DETERMINATIONS (evaluated deterministically from the data above; treat structured-data evidence as verified):
 {fired_text}
 
 KNOWN DATA-INTEGRITY FLAGS (already captured — factor into confidence, do not repeat):
